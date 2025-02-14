@@ -1,23 +1,25 @@
-ENG:
-This code implements camera calibration using a 7x10 checkerboard. The implemented algorithm includes video capture from the camera, detection
-of nodes of the checkerboard grid, correction of node data, coordinate interpolation and subsequent video processing using the received data. The algorithm is implemented in FPGAs and
-is designed for low-performance devices that do not have enough computing power to use the OpenCV library, which contains 
-necessary image processing algorithms. The program includes mechanisms for error and exception handling, which ensures reliable operation of the program even in
-conditions of unstable video signal or poor image quality, as well as two functions for visualizing data in three-dimensional and two-dimensional form and for
-creating a new image based on the coordinates specified in the auxiliary array.
+Доброго времени суток
+Данный проект представляет собой не сложную, отлаженную программу для создания вида сверху (birdview) через преобразование видеоизображение с любой usb-камеры
+в режиме реального времени. Данная программа полностью написана на Python и может быть реализовани в ПЛИС. Основная цель программы — захватить видео с usb-камеры, 
+выполнить калибровку с использованием шахматной доски и интерполировать координаты пикселей для создания нового видеоизображения. Каждый из шагов подробно расписан ниже
+в разделе «Подбробное описание». В конце данного раздела приведена ссылка на youtube-видео с подробным демонстрированием результатов работы программы.
 
-RUS:
-Данный код реализует калибровку камеры с использованием шахматной доски размером 7x10. Реализованный алгоритм включает в себя захват видео с камеры, обнаружение 
-узлов сетки шахматной доски, коррекцию данных узлов, интерполяцию координат и последующую обработку видео с использованием полученных данных. Алгоритм реализуется в ПЛИС и 
-предназначен для устройств с маленькой производительностью, в которых не достаточно вычислительной мощности для использования библиотеки OpenCv, которая содержит в себе 
-необходимые алгоритмы обработки изображений. Программа включает в себя механизмы для обработки ошибок и исключений, что обеспечивает надежность работы программы даже в 
-условиях нестабильного видеосигнала или низкого качества изображения, а также две функции для визуализации данных в трехмерном и двумерном виде и для 
-создания нового изображения на основании координат, указанных в вспомогательном массиве.
+Good afternoon
+This project is a simple, debugged programme to create a birdview by converting video from any usb-camera in real time.
+in real time mode. This programme is written entirely in Python and can be implemented in FPGA. The main purpose of the programme is to capture video from a usb-camera, 
+calibrate using a checkerboard and interpolate the pixel coordinates to create a new video image. Each of the steps is detailed below
+in the «Detailed Description» section below. At the end of this section there is a link to a youtube video with a detailed demonstration of the programme results.
 
-中国语文科:
-此代码使用7x10棋盘实现相机校准。 实现的算法包括来自摄像机的视频捕获，检测
-棋盘格的节点，校正节点数据，坐标插值和随后的视频处理使用接收的数据。 该算法在Fpga和
-是专为低性能的设备，没有足够的计算能力来使用OpenCV库，其中包含 
-必要的图像处理算法。 该程序包括错误和异常处理机制，即使在
-视频信号不稳定或图像质量差的条件，以及用于以三维和二维形式可视化数据和用于
-根据辅助数组中指定的坐标创建新图像。
+午安
+本專案是一個簡單、已除錯的程式，可透過即時轉換任何 USB 攝影機的視訊來建立鳥瞰圖。
+實時模式。此程式完全以 Python 寫成，並可在 FPGA 中實作。程式的主要目的是從 USB 攝影機擷取影片、 
+使用 checkerboard 進行校準，並內插像素坐標以建立新的視訊影像。每個步驟的詳細說明如下
+詳細說明」部分。在本節的最後，有一個 youtube 視訊的連結，裡面有程式結果的詳細示範。
+
+下午好
+该项目是一个简单的调试程序，通过实时转换任何 USB 摄像机的视频来创建鸟瞰图。
+实时模式。该程序完全用 Python 编写，可在 FPGA 中实现。程序的主要目的是从 USB 摄像头捕捉视频、 
+使用棋盘格进行校准，并对像素坐标进行插值以创建新的视频图像。以下是每个步骤的详细说明
+详细说明 "部分。本节末尾提供了一个 youtube 视频链接，详细演示了该程序的结果。
+
+
