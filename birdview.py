@@ -50,7 +50,8 @@ if __name__ == '__main__':
     if not cap.isOpened():
         print("Cannot open camera")
         exit()
-
+        
+    #Criteria for accurately finding the corners of a chessboard
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 
     # Chessboard nodes
