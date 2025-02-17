@@ -53,12 +53,12 @@ if __name__ == '__main__':
 
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
 
-    # cbd_shape = (12, 7)
+    # Chessboard nodes
     cbd_shape = (9, 6)
     out_image_shape = (600, 400)
     arr = np.zeros((cbd_shape[0] * cbd_shape[1], 4))
 
-    # Создание координат сетки
+    # Creating coordinates using chessboard nodes
     X = np.flip(np.linspace(0, out_image_shape[0], cbd_shape[0], dtype=int))
     Y = np.linspace(0, out_image_shape[1], cbd_shape[1], dtype=int)
     
@@ -103,7 +103,6 @@ if __name__ == '__main__':
 
     print("Calibration result:")
     print(arr)
-    np.save(os.path.join(os.getcwd(), "arrays", "calib.npy"), arr)
 
     # Create a grid of points for interpolation that will be used for
     # convert the coordinates of the chessboard nodes into image pixels.
